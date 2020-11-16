@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3200;
+const port = 80;
 
 var countries = [
     { name: 'Common QA', url: 'https://hdot-public-qa.azurewebsites.net/', imageUrl: ''},
