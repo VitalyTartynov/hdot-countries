@@ -1,6 +1,7 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const port = 443;
+const port = process.env.PORT || 3200;
 
 var countries = [
     { name: 'Common QA', url: 'https://hdot-public-qa.azurewebsites.net/', imageUrl: ''},
@@ -12,7 +13,7 @@ app.get('/api', (req, res, next) => {
     res.send('Hello world');
 });
 
-app.get('/api/countries', function(req, res, next) {
+app.get('/countries', cors(), function(req, res, next) {
     res.send(countries);
 });
 
